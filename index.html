@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Latif | UI/UX Designer & Frontend Developer</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="John Latif - UI/UX Designer & Frontend Developer. Expert in creating stunning digital experiences with modern design." />
+    <meta name="keywords" content="UI/UX Designer, Frontend Developer, John Latif, Portfolio, Web Design" />
+    <link rel="canonical" href="https://portfolio-johnlatif.vercel.app" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="John Latif | UI/UX Designer & Frontend Developer" />
+    <meta property="og:description" content="Creative designer and developer crafting beautiful digital experiences." />
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=John+Latif+Portfolio&size=1200&background=1A0F0A&color=FF8C00&bold=true" />
+    <meta property="og:url" content="https://portfolio-johnlatif.vercel.app" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 lg:px-20 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">
+                <span class="text-amber-400">John</span>Latif
+            </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-8 text-white/80 font-medium">
+                <li><a href="#about" class="hover:text-amber-400 transition-colors" data-i18n="navAbout">ني ني</a></li>
+                <li><a href="#projects" class="hover:text-amber-400 transition-colors" data-i18n="navWork">أعمالي</a></li>
+                <li><a href="#skills" class="hover:text-amber-400 transition-colors" data-i18n="navSkills">مهاراتي</a></li>
+                <li><a href="#contact" class="px-6 py-2 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-full transition-all shadow-lg shadow-amber-500/30 hover:scale-105" data-i18n="navContact">
+                    تواصل معي
+                </a></li>
+            </ul>
+            
+            <!-- Language Toggle -->
+            <div class="hidden md:flex items-center gap-2 ml-4">
+                <a href="#" id="langEn" class="text-amber-400 font-bold text-sm border border-amber-400/30 px-3 py-1 rounded-full bg-amber-500/20 transition-all">EN</a>
+                <a href="#" id="langAr" class="text-white/60 hover:text-white text-sm border border-white/10 px-3 py-1 rounded-full transition-all">AR</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="menuToggle" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-[#1A0F0A]/95 backdrop-blur-lg absolute top-full left-0 w-full py-6 px-6">
+            <ul class="flex flex-col gap-4 text-white/80 font-medium">
+                <li><a href="#about" class="hover:text-amber-400 transition-colors" data-i18n="navAbout">ني ني</a></li>
+                <li><a href="#projects" class="hover:text-amber-400 transition-colors" data-i18n="navWork">أعمالي</a></li>
+                <li><a href="#skills" class="hover:text-amber-400 transition-colors" data-i18n="navSkills">مهاراتي</a></li>
+                <li><a href="#contact" class="inline-block px-6 py-2 bg-amber-500 text-black font-bold rounded-full text-center" data-i18n="navContact">تواصل معي</a></li>
+                <li class="flex gap-4 pt-2 border-t border-white/10">
+                    <a href="#" id="mobileLangEn" class="text-amber-400 font-bold">EN</a>
+                    <a href="#" id="mobileLangAr" class="text-white/60">AR</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-amber-800 via-orange-900 to-[#1A0F0A] text-white overflow-hidden relative">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-orange-600 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-20">
+            <!-- Text Content -->
+            <div class="space-y-6">
+                <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10">
+                    <span class="text-amber-300 text-sm font-semibold" data-i18n="heroBadge">✦ متاح للعمل</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-none tracking-tight">
+                    <span class="text-amber-300 block" data-i18n="heroTitle1">أصمم</span>
+                    <span class="text-orange-400 block" data-i18n="heroTitle2">تجارب ممتعة</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-amber-100/80 font-light" data-i18n="heroSubtitle">
+                    جون لطيف · مصمم UI/UX ومطور واجهات أمامية
+                </p>
+                <p class="text-base lg:text-lg text-white/60 max-w-lg" data-i18n="heroDesc">
+                    أصمم تجارب ويب تفاعلية وتطبيقات واقعية تركز على الأداء وسهولة الاستخدام.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-full transition-all shadow-xl shadow-amber-500/30 hover:scale-105 hover:shadow-amber-500/50 flex items-center gap-2" data-i18n="heroBtn1">
+                        شاهد أعمالي <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border-2 border-white/20 hover:border-amber-400 text-white font-bold rounded-full transition-all hover:scale-105 backdrop-blur-sm" data-i18n="heroBtn2">
+                        تواصل معي
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Avatar / Image -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative">
+                    <!-- Glowing ring -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-600 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                    <!-- Image container with glassmorphism -->
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-tr from-amber-400 to-orange-600 p-1 glass-card">
+                        <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/10">
+                            <img 
+                                src="https://i.postimg.cc/yxqvWq2f/DSC-7841.jpg" 
+                                alt="John Latif - UI/UX Designer" 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                    <!-- Floating badges -->
+                    <div class="absolute -top-4 -right-4 bg-amber-500 text-black px-4 py-2 rounded-full text-sm font-bold shadow-xl animate-bounce">
+                        <i class="fas fa-star mr-1"></i> <span data-i18n="badgeYears">5+ سنوات</span>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-medium border border-white/20">
+                        <i class="fas fa-code mr-1 text-amber-400"></i> <span data-i18n="badgeProjects">50+ مشروع</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="py-24 bg-[#0D0806] text-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-6xl font-bold">
+                        <span class="text-amber-400" data-i18n="aboutTitleHighlight">ني</span> <span data-i18n="aboutTitle">ني</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-600"></div>
+                    <p class="text-lg text-white/70 leading-relaxed" data-i18n="aboutDesc1">
+                        أنا <span class="text-white font-semibold">جون لطيف</span>، مصمم UI/UX ومطور واجهات أمامية شغوف بإنشاء تجارب رقمية جميلة تركز على المستخدم.
+                    </p>
+                    <p class="text-white/60 leading-relaxed" data-i18n="aboutDesc2">
+                        أنا شخص طموح وشغوف بالتعلّم والتطوير المستمر، وأسعى دائمًا إلى اكتساب مهارات جديدة وتحويل المعرفة إلى تطبيق عملي. أحب التفكير بطريقة مختلفة، الاهتمام بالتفاصيل، وتطوير الأفكار للوصول إلى نتائج أفضل. أؤمن بأهمية التطور المستمر، وأحرص على أن يكون لكل مشروع أعمل عليه قيمة حقيقية تعكس مهاراتي وشغفي بما أقدمه.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="text-xl font-semibold mb-4" data-i18n="skillsTitle">المهارات الأساسية</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">رياكت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">تايب سكريبت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جافا سكريبت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">HTML5</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">CSS3</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">تيلويند</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جيت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جيت هاب</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">REST APIs</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">فايت</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="text-xl font-semibold mb-4" data-i18n="creativeTitle">التقنيات الإبداعية</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Three.js</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">رياكت ثري فايبر</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">@react-three/drei</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">فريمر موشن</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section id="projects" class="py-24 bg-[#0D0806] text-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="text-amber-400" data-i18n="projectsTitleHighlight">أ</span> <span data-i18n="projectsTitle">عمالي</span>
+                </h2>
+                <p class="text-white/60 max-w-2xl mx-auto" data-i18n="projectsDesc">
+                    مجموعة من المشاريع التي تعرض مهاراتي وأسلوبي في التطوير.
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/B6Tz00JP/shulamith-gallery.jpg" alt="Shulamith Gallery" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-i18n="project1Title">شولميث جاليري</h3>
+                        <p class="text-white/60 text-sm mb-4" data-i18n="project1Desc">منصة فنية لعرض وبيع اللوحات الفنية، مع إمكانية تنفيذ أي تابلوه بخامات وأحجام مختلفة حسب طلب العميل، وتقديم استشارات فنية مجانية.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">HTML</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">CSS</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جافا سكريبت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Node.js</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Express</span>
+                        </div>
+                        <a href="#" class="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all" data-i18n="viewProject">
+                            عرض المشروع <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/mrMXYszD/points-dr-mirna.jpg" alt="Points System" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-i18n="project2Title">نظام نقاط لصيدلية د. ميرنا</h3>
+                        <p class="text-white/60 text-sm mb-4" data-i18n="project2Desc">نظام متكامل لإدارة نقاط الولاء لعملاء صيدلية د. ميرنا، يتيح جمع النقاط مع كل عملية شراء واستبدالها بمكافآت وعروض حصرية.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">HTML</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">CSS</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جافا سكريبت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Node.js</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Express</span>
+                        </div>
+                        <a href="#" class="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all" data-i18n="viewProject">
+                            عرض المشروع <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/6QRjrX2h/login.jpg" alt="Login System" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" data-i18n="project3Title">نظام تسجيل الدخول</h3>
+                        <p class="text-white/60 text-sm mb-4" data-i18n="project3Desc">نظام تسجيل دخول تجريبي بسيط وآمن مع واجهة مستخدم نظيفة، يتيح للمستخدمين تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">HTML</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">CSS</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">جافا سكريبت</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Node.js</span>
+                            <span class="px-3 py-1 bg-white/10 rounded-full text-xs text-amber-300">Express</span>
+                        </div>
+                        <a href="#" class="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all" data-i18n="viewProject">
+                            عرض المشروع <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section id="skills" class="py-24 bg-[#0D0806] text-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">
+                    <span class="text-amber-400" data-i18n="skillsPageTitleHighlight">م</span> <span data-i18n="skillsPageTitle">هاراتي</span>
+                </h2>
+                <p class="text-white/60 max-w-2xl mx-auto" data-i18n="skillsPageDesc">
+                    التقنيات التي أعمل بها لإنشاء تجارب رقمية استثنائية
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-2 text-amber-400" data-i18n="coreSkillsTitle">المهارات الأساسية</h3>
+                    <p class="text-white/40 text-sm mb-6" data-i18n="coreSkillsDesc">التقنيات الأساسية التي أعمل بها يومياً</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">رياكت</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">تايب سكريبت</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">جافا سكريبت</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">HTML5</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">CSS3</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">تيلويند</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">جيت</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">جيت هاب</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">REST APIs</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">فايت</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-2 text-amber-400" data-i18n="creativeSkillsTitle">التقنيات الإبداعية</h3>
+                    <p class="text-white/40 text-sm mb-6" data-i18n="creativeSkillsDesc">أدوات ثلاثية الأبعاد وإبداعية لتجارب غامرة</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">Three.js</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">رياكت ثري فايبر</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">@react-three/drei</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/80">فريمر موشن</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="py-24 bg-[#0D0806] text-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-4">
+                    <span data-i18n="contactTitle">تواصل</span> <span class="text-amber-400" data-i18n="contactTitleHighlight">معي</span>
+                </h2>
+                <p class="text-white/60 max-w-2xl mx-auto" data-i18n="contactDesc">
+                    يمكنك التواصل معي عبر أي من وسائل التواصل التالية
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Contact Info Card -->
+                <div class="glass-card p-8 rounded-2xl text-center">
+                    <div class="w-24 h-24 bg-gradient-to-tr from-amber-400 to-orange-600 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl font-bold text-black">
+                        JL
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1" data-i18n="contactName">جون لطيف</h3>
+                    <p class="text-white/60 text-sm mb-6" data-i18n="contactRole">مطور واجهة امامية و مطور ويب و واجهة خلفية</p>
+                    
+                    <div class="space-y-4 text-right">
+                        <div class="flex items-center justify-end gap-4">
+                            <div>
+                                <p class="text-white font-medium" data-i18n="contactLocationValue">مصر</p>
+                                <p class="text-white/40 text-sm" data-i18n="contactLocation">الموقع</p>
+                            </div>
+                            <div class="w-10 h-10 bg-amber-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end gap-4">
+                            <div>
+                                <p class="text-white font-medium">01274445091</p>
+                                <p class="text-white/40 text-sm" data-i18n="contactPhone">الهاتف</p>
+                            </div>
+                            <div class="w-10 h-10 bg-amber-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-amber-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end gap-4">
+                            <div>
+                                <p class="text-white font-medium">johnlatif37@gmail.com</p>
+                                <p class="text-white/40 text-sm" data-i18n="contactEmail">البريد الإلكتروني</p>
+                            </div>
+                            <div class="w-10 h-10 bg-amber-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-amber-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center gap-4 mt-6 pt-6 border-t border-white/10">
+                        <a href="https://wa.me/johnlatiff" class="w-12 h-12 bg-white/5 hover:bg-amber-500/20 rounded-full flex items-center justify-center text-white/60 hover:text-amber-400 transition-all">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/john.latif.5815" class="w-12 h-12 bg-white/5 hover:bg-amber-500/20 rounded-full flex items-center justify-center text-white/60 hover:text-amber-400 transition-all">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="mailto:johnlatif37@gmail.com" class="w-12 h-12 bg-white/5 hover:bg-amber-500/20 rounded-full flex items-center justify-center text-white/60 hover:text-amber-400 transition-all">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="mailto:johnlatif37@gmail.com" class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300 group">
+                        <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500/30 transition-colors">
+                            <i class="fas fa-envelope text-amber-400 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="contactCard1Title">راسلني</h3>
+                        <p class="text-white/60 text-sm">johnlatif37@gmail.com</p>
+                    </a>
+                    
+                    <a href="tel:+201274445091" class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300 group">
+                        <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500/30 transition-colors">
+                            <i class="fas fa-phone text-amber-400 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="contactCard2Title">اتصل بي</h3>
+                        <p class="text-white/60 text-sm">01274445091</p>
+                    </a>
+                    
+                    <a href="https://wa.me/johnlatiff" class="glass-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300 group">
+                        <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500/30 transition-colors">
+                            <i class="fab fa-whatsapp text-amber-400 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="contactCard3Title">واتساب</h3>
+                        <p class="text-white/60 text-sm" data-i18n="contactCard3Sub">تحدث معي</p>
+                    </a>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="py-8 bg-[#0D0806] border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-20 text-center">
+            <p class="text-white/40 text-sm">
+                © 2026 <span class="text-amber-400">John Latif</span> · <span data-i18n="footerText">جميع الحقوق محفوظة.</span></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/main.js"></script>
+</body>
+</html>
