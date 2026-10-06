@@ -1,4 +1,3 @@
-// ========== NAVBAR SCROLL EFFECT ==========
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -11,7 +10,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ========== MOBILE MENU TOGGLE ==========
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -22,7 +20,6 @@ menuToggle.addEventListener('click', () => {
         : '<i class="fas fa-times"></i>';
 });
 
-// Close mobile menu on link click
 document.querySelectorAll('#mobileMenu a:not(.flex a)').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
@@ -30,7 +27,6 @@ document.querySelectorAll('#mobileMenu a:not(.flex a)').forEach(link => {
     });
 });
 
-// ========== SMOOTH SCROLLING FOR NAV LINKS ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
@@ -50,7 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== FADE IN ON SCROLL ==========
 const fadeElements = document.querySelectorAll('.glass-card, .project-card');
 
 const fadeObserver = new IntersectionObserver((entries) => {
@@ -71,16 +66,13 @@ fadeElements.forEach(el => {
     fadeObserver.observe(el);
 });
 
-// ========== LANGUAGE SWITCHING ==========
 const translations = {
     en: {
-        // Navigation
         navAbout: 'About',
         navWork: 'Work',
         navSkills: 'Skills',
         navContact: "Let's Talk",
         
-        // Hero
         heroBadge: '✦ Available for Freelance',
         heroTitle1: 'CREATE',
         heroTitle2: '& DESIGN',
@@ -91,7 +83,6 @@ const translations = {
         badgeYears: '5+ Years',
         badgeProjects: '50+ Projects',
         
-        // About
         aboutTitleHighlight: 'About',
         aboutTitle: 'Me',
         aboutDesc1: "I'm John Latif, a passionate UI/UX Designer and Frontend Developer with a knack for creating beautiful, user-centric digital experiences.",
@@ -99,19 +90,15 @@ const translations = {
         skillsTitle: 'Core Skills',
         creativeTitle: 'Creative Technologies',
         
-        // Projects
         projectsTitleHighlight: 'My',
         projectsTitle: 'Projects',
         projectsDesc: 'A selection of my recent work showcasing design thinking, development skills, and creative problem-solving.',
-        project1Title: 'Shulamith Gallery',
-        project1Desc: 'An art platform for displaying and selling paintings, with the ability to execute any painting with different materials and sizes according to the client\'s request, and provide free art consultations.',
-        project2Title: 'Points System for Dr. Mirna',
-        project2Desc: 'An integrated loyalty points management system for Dr. Mirna Pharmacy customers, allowing points collection with each purchase and redemption for exclusive rewards and offers.',
-        project3Title: 'Login System',
-        project3Desc: 'A simple and secure demo login system with a clean user interface, allowing users to log in using username and password.',
+        project1Title: 'Points System for Dr. Mirna',
+        project1Desc: 'An integrated loyalty points management system for Dr. Mirna Pharmacy customers, allowing points collection with each purchase and redemption for exclusive rewards and offers.',
+        project2Title: 'Login System',
+        project2Desc: 'A simple and secure demo login system with a clean user interface, allowing users to log in using username and password.',
         viewProject: 'View Project',
         
-        // Skills Page
         skillsPageTitleHighlight: 'My',
         skillsPageTitle: 'Skills',
         skillsPageDesc: 'Technologies I work with to create exceptional digital experiences',
@@ -120,7 +107,6 @@ const translations = {
         creativeSkillsTitle: 'Creative Technologies',
         creativeSkillsDesc: '3D and creative tools for immersive experiences',
         
-        // Contact
         contactTitle: "Let's",
         contactTitleHighlight: 'Connect',
         contactDesc: 'Have a project in mind? Let\'s collaborate and create something amazing together.',
@@ -139,13 +125,11 @@ const translations = {
         footerText: 'All rights reserved. Crafted with',
     },
     ar: {
-        // Navigation
         navAbout: 'ني ني',
         navWork: 'أعمالي',
         navSkills: 'مهاراتي',
         navContact: 'تواصل معي',
         
-        // Hero
         heroBadge: '✦ متاح للعمل',
         heroTitle1: 'أصمم',
         heroTitle2: 'تجارب ممتعة',
@@ -156,7 +140,6 @@ const translations = {
         badgeYears: '5+ سنوات',
         badgeProjects: '50+ مشروع',
         
-        // About
         aboutTitleHighlight: 'ني',
         aboutTitle: 'ني',
         aboutDesc1: 'أنا جون لطيف، مصمم UI/UX ومطور واجهات أمامية شغوف بإنشاء تجارب رقمية جميلة تركز على المستخدم.',
@@ -164,19 +147,15 @@ const translations = {
         skillsTitle: 'المهارات الأساسية',
         creativeTitle: 'التقنيات الإبداعية',
         
-        // Projects
         projectsTitleHighlight: 'أ',
         projectsTitle: 'عمالي',
         projectsDesc: 'مجموعة من المشاريع التي تعرض مهاراتي وأسلوبي في التطوير.',
-        project1Title: 'شولميث جاليري',
-        project1Desc: 'منصة فنية لعرض وبيع اللوحات الفنية، مع إمكانية تنفيذ أي تابلوه بخامات وأحجام مختلفة حسب طلب العميل، وتقديم استشارات فنية مجانية.',
-        project2Title: 'نظام نقاط لصيدلية د. ميرنا',
-        project2Desc: 'نظام متكامل لإدارة نقاط الولاء لعملاء صيدلية د. ميرنا، يتيح جمع النقاط مع كل عملية شراء واستبدالها بمكافآت وعروض حصرية.',
-        project3Title: 'نظام تسجيل الدخول',
-        project3Desc: 'نظام تسجيل دخول تجريبي بسيط وآمن مع واجهة مستخدم نظيفة، يتيح للمستخدمين تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور.',
+        project1Title: 'نظام نقاط لصيدلية د. ميرنا',
+        project1Desc: 'نظام متكامل لإدارة نقاط الولاء لعملاء صيدلية د. ميرنا، يتيح جمع النقاط مع كل عملية شراء واستبدالها بمكافآت وعروض حصرية.',
+        project2Title: 'نظام تسجيل الدخول',
+        project2Desc: 'نظام تسجيل دخول تجريبي بسيط وآمن مع واجهة مستخدم نظيفة، يتيح للمستخدمين تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور.',
         viewProject: 'عرض المشروع',
         
-        // Skills Page
         skillsPageTitleHighlight: 'م',
         skillsPageTitle: 'هاراتي',
         skillsPageDesc: 'التقنيات التي أعمل بها لإنشاء تجارب رقمية استثنائية',
@@ -185,7 +164,6 @@ const translations = {
         creativeSkillsTitle: 'التقنيات الإبداعية',
         creativeSkillsDesc: 'أدوات ثلاثية الأبعاد وإبداعية لتجارب غامرة',
         
-        // Contact
         contactTitle: 'تواصل',
         contactTitleHighlight: 'معي',
         contactDesc: 'يمكنك التواصل معي عبر أي من وسائل التواصل التالية',
@@ -211,7 +189,6 @@ function switchLanguage(lang) {
     currentLang = lang;
     const t = translations[lang];
     
-    // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (t[key] !== undefined) {
@@ -233,7 +210,6 @@ function switchLanguage(lang) {
         }
     });
     
-    // Special handling for About title
     const aboutTitle = document.querySelector('#about h2');
     if (aboutTitle) {
         const span = aboutTitle.querySelector('.text-amber-400');
@@ -246,7 +222,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Special handling for Projects title
     const projectsTitle = document.querySelector('#projects h2');
     if (projectsTitle) {
         const span = projectsTitle.querySelector('.text-amber-400');
@@ -259,7 +234,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Special handling for Skills page title
     const skillsTitle = document.querySelector('#skills h2');
     if (skillsTitle) {
         const span = skillsTitle.querySelector('.text-amber-400');
@@ -272,7 +246,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Special handling for Contact title
     const contactTitle = document.querySelector('#contact h2');
     if (contactTitle) {
         const span = contactTitle.querySelector('.text-amber-400');
@@ -285,7 +258,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Update language toggle buttons - Desktop
     const desktopLangBtns = document.querySelectorAll('#navbar .hidden.md\\:flex .gap-2 a');
     if (desktopLangBtns.length >= 2) {
         if (lang === 'en') {
@@ -297,7 +269,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Update language toggle buttons - Mobile
     const mobileLangBtns = document.querySelectorAll('#mobileMenu .flex a');
     if (mobileLangBtns.length >= 2) {
         if (lang === 'en') {
@@ -309,7 +280,6 @@ function switchLanguage(lang) {
         }
     }
     
-    // Update direction for Arabic
     if (lang === 'ar') {
         document.documentElement.dir = 'rtl';
         document.documentElement.lang = 'ar';
@@ -319,7 +289,6 @@ function switchLanguage(lang) {
     }
 }
 
-// ========== EVENT LISTENERS FOR LANGUAGE BUTTONS ==========
 document.addEventListener('DOMContentLoaded', function() {
     const langEn = document.getElementById('langEn');
     const langAr = document.getElementById('langAr');
@@ -361,11 +330,8 @@ document.addEventListener('DOMContentLoaded', function() {
     switchLanguage('en');
 });
 
-// ========== DYNAMIC YEAR IN FOOTER ==========
 const currentYear = new Date().getFullYear();
 const footerText = document.querySelector('footer p');
 if (footerText) {
     footerText.innerHTML = footerText.innerHTML.replace('2026', currentYear);
 }
-
-console.log('🚀 John Latif Portfolio loaded successfully!');
